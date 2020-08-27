@@ -1,0 +1,160 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Personal Resume
+% LaTeX Document
+% 
+% Jesús Antonio González Quevedo
+% Using the Developer CV Class by Jan Vorisek
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%-------------------------------------------------------------------------------
+%   Document Configuration
+%-------------------------------------------------------------------------------
+
+\documentclass[9pt]{devcv}
+\include{jesugq}
+\entrue
+%\estrue
+
+%-------------------------------------------------------------------------------
+
+\begin{document}
+
+%-------------------------------------------------------------------------------
+%   Personal Information
+%-------------------------------------------------------------------------------
+
+\begin{minipage}[t]{0.25\textwidth}
+    \vspace{-\baselineskip}
+
+    \icon{Phone}
+    \usernumb
+
+    \icon{MapMarker}
+    \userpost
+
+    \href{\linkmail}{\icon{At}}
+    \usermail
+    
+    \href{\linklinkedin}{\icon{Linkedin}}
+    \href{\linkgithub}{\icon{Github}}
+    \username
+\end{minipage}
+\begin{minipage}[t]{0.7\textwidth}
+    \vspace{-\baselineskip}
+
+    \HUGE{\firstname}
+
+    \vspace{-3pt}
+
+    \HUGE{\lastname}
+
+    \huge{\ocupation}
+\end{minipage}
+
+\vspace{\baselineskip}
+
+%-------------------------------------------------------------------------------
+%   Personal Projects
+%-------------------------------------------------------------------------------
+
+\cvsect{\projects}
+
+\begin{entrylist}
+    \entry
+        {\periodcontact}
+        {\ocupationcontact}
+        {\enterprisecontact}
+        {\descriptioncontact}
+    \entry
+        {\periodcompiler}
+        {\ocupationcompiler}
+        {\enterprisecompiler}
+        {\descriptioncompiler}
+    \entry
+        {\periodkubeet}
+        {\ocupationkubeet}
+        {\enterprisekubeet}
+        {\descriptionkubeet}
+    \entry
+        {\periodcrafter}
+        {\ocupationcrafter}
+        {\enterprisecrafter}
+        {\descriptioncrafter}
+    \entry
+        {\periodtutor}
+        {\ocupationtutor}
+        {\enterprisetutor}
+        {\descriptiontutor}
+\end{entrylist}
+
+\vspace{-\baselineskip}
+
+%-------------------------------------------------------------------------------
+%   Education
+%-------------------------------------------------------------------------------
+
+\cvsect{\education}
+
+\begin{entrylist}
+    \entry
+        {\periodengineer}
+        {\ocupationengineer}
+        {\enterpriseengineer}
+        {\descriptionengineer}
+\end{entrylist}
+
+%-------------------------------------------------------------------------------
+%   Skills
+%-------------------------------------------------------------------------------
+
+\cvsect{\skills}
+
+\begin{minipage}[t]{0.33\textwidth}
+    \vspace{-\baselineskip}
+    
+    \icon{Code}
+    \textbf{\programming}
+
+    \listprogramming
+\end{minipage}
+\begin{minipage}[t]{0.33\textwidth}
+    \vspace{-\baselineskip}
+
+    \icon{Globe}
+    \textbf{\webdev}
+
+    \listwebdev
+
+    \vspace{8pt}
+
+    \icon{Desktop}
+    \textbf{\development}
+
+    \listdevelopment
+\end{minipage}
+\begin{minipage}[t]{0.33\textwidth}
+    \vspace{-\baselineskip}
+
+    \icon{Language}
+    \textbf{\languages}
+
+    \listlanguages
+
+    \vspace{8pt}
+
+    \icon{Wrench}
+    \textbf{\utilities}
+
+    \listutilities
+
+    \vspace{8pt}
+
+    \icon{Pencil}
+    \textbf{\theory}
+
+    \listtheory
+\end{minipage}
+
+%-------------------------------------------------------------------------------
+
+\end{document}
