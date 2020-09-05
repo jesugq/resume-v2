@@ -61,15 +61,12 @@
 
 \usepackage[utf8]{inputenc} % Required for inputting international characters
 \usepackage[T1]{fontenc} % Output font encoding for international characters
+\usepackage{fetamont}
 %\usepackage[default]{raleway}
 %\usepackage[defaultsans]{droidsans}
-\usepackage{cmbright}
+%\usepackage{cmbright}
 %\usepackage[default]{gillius}
-%\usepackage{fetamont}
 %\usepackage{roboto}
-
-\renewcommand*\familydefault{\sfdefault} % Force the sans-serif version of any font used
-
 
 %------------------------------------------------
 
