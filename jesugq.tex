@@ -2,7 +2,7 @@
 % Resume Text
 % LaTeX Document
 % 
-% Jesús Antonio González Quevedo
+% Jesus Antonio Gonzalez Quevedo
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %-------------------------------------------------------------------------------
@@ -20,22 +20,47 @@
 \newcommand{\docslash}{
     \, / \,
 }
-\newcommand{\docblank}{
-    \color{white}{\color{white}{.}}
-}
 
 %-------------------------------------------------------------------------------
 %   Personal Information
 %-------------------------------------------------------------------------------
 
-\newcommand{\firstname}{
-    \en{Jesus Antonio}\es{Jesús Antonio}
+\newcommand{\placeperson}{
+    \vspace{-\baselineskip}
+
+    \icon{Phone} \usernumb
+
+    \icon{MapMarker} \userpost   
 }
-\newcommand{\lastname}{
-    \en{Gonzalez Quevedo}\es{González Quevedo}
+\newcommand{\linksperson}{
+    \vspace{-\baselineskip}
+
+    \href{\linklinkedin}{\icon{Linkedin}} \href{\linkgithub}{\icon{Github}} \username
+    
+    \href{\linkmail}{\icon{Envelope}} \usermail
+}
+\newcommand{\namesperson}{
+    \vspace{-\baselineskip}
+    
+    \vspace{-4pt}
+
+    \HUGE{\shortname}
+
+    \vspace{-12pt}
+}
+\newcommand{\shortname}{
+    \en{
+        Jesus Gonzalez
+    }\es{
+        Jesús González
+    }
 }
 \newcommand{\ocupation}{
-    \en{Computer Technologies Engineer}\es{Ingeniero en Tecnologías Computacionales}
+    \en{
+        Computer Technologies Engineer
+    }\es{
+        Ingeniero en Tecnologías Computacionales
+    }
 }
 \newcommand{\usernumb}{
     +52 271 108 5129
@@ -56,7 +81,7 @@
     https://github.com/jesugq
 }
 \newcommand{\linklinkedin}{
-   https://www.linkedin.com/in/jesugq/
+    https://www.linkedin.com/in/jesugq/
 }
 
 %-------------------------------------------------------------------------------
@@ -66,47 +91,35 @@
 \newcommand{\projects}{
     \en{Projects}\es{Proyectos}
 }
-\newcommand{\current}{
-    \en{Current}\es{Actual}
-}
 \newcommand{\education}{
     \en{Education}\es{Educación}
 }
 \newcommand{\skills}{
     \en{Skills}\es{Habilidades}
 }
-\newcommand{\programming}{
-    \en{Programming}\es{Programación}
-}
-\newcommand{\webdev}{
-    \en{Web Dev}\es{Des. Web}
-}
-\newcommand{\development}{
-    \en{Development}\es{Desarrollo}
-}
-\newcommand{\languages}{
-    \en{Language}\es{Lenguaje}
-}
-\newcommand{\utilities}{
-    \en{Utilities}\es{Utilidades}
-}
-\newcommand{\theory}{
-    \en{Theory}\es{Teoría}
-}
 
 %-------------------------------------------------------------------------------
-%   Personal Projects
+%   Projects
 %-------------------------------------------------------------------------------
 
-\newcommand{\periodcontact}{
-    2020/05 - \current
+\newcommand{\datecontact}{
+    \en{
+        \texttt{Sep 2020}
+    }\es{
+        \texttt{Sep 2020}
+    }
 }
-\newcommand{\ocupationcontact}{
-    \en{Contacts}\es{Contactos}
-    \href{https://github.com/jesugq/contacts}{\faGithub}
+\newcommand{\titlecontact}{
+    \en{
+        Contacts
+    }\es{
+        Contactos
+    }\href{https://github.com/jesugq/contacts}{\faGithub}
 }
-\newcommand{\enterprisecontact}{}
-\newcommand{\descriptioncontact}{
+\newcommand{\subtitlecontact}{
+    Python, Tkinter, MongoDB
+}
+\newcommand{\summarycontact}{
     \en{
         \docbullet Implementation of a contact list for users with many social media accounts and phone numbers.\\
         \docbullet Usage of a non-relational database to store users, their contacts and the system's available platforms in a flexible manner.
@@ -114,18 +127,26 @@
         \docbullet Implementación de una lista de contactos para usuarios con diferentes cuentas en redes sociales.\\
         \docbullet Uso de una base de datos no relacional para el almacenamiento de los usuarios, sus contactos y plataformas disponibles de una manera flexible.
     }
-    \\ \texttt{Python} \docslash \texttt{TKinter} \docslash \texttt{MongoDB}
 }
 
-\newcommand{\periodcompiler}{
-    2019/07 - 2019/11
+\newcommand{\datecompiler}{
+    \en{
+        \texttt{Nov 2019}
+    }\es{
+        \texttt{Nov 2019}
+    }
 }
-\newcommand{\ocupationcompiler}{
-    \en{Generic Compiler}\es{Compilador Genérico}
-    \href{https://github.com/jesugq/compiler-simplified-syntax-tree}{\faGithub}
+\newcommand{\titlecompiler}{
+    \en{
+        Generic Compiler
+    }\es{
+        Compilador Genérico
+    }\href{https://github.com/jesugq/compiler-simplified-syntax-tree}{\faGithub}
 }
-\newcommand{\enterprisecompiler}{}
-\newcommand{\descriptioncompiler}{
+\newcommand{\subtitlecompiler}{
+    C, Flex, Bison
+}
+\newcommand{\summarycompiler}{
     \en{
         \docbullet Implementation of a generic compiler for the recognition of a Leftmost Derivation Grammar (1).\\
         \docbullet Usage of a simplified syntax tree along with a symbols and functions table to assert instructions.
@@ -133,18 +154,26 @@
         \docbullet Implementación de un compilador que reconozca gramáticas de Derivación a la Izquierda (1).\\
         \docbullet Uso de árbol sintáctico simplificado junto a una tabla de símbolos y funciones para leer instrucciones.
     }
-    \\ \texttt{C} \docslash \texttt{Flex} \docslash \texttt{Bison}
 }
 
-\newcommand{\periodkubeet}{
-    2018/01 - 2018/05
+\newcommand{\datekubeet}{
+    \en{
+        \texttt{May 2018}
+    }\es{
+        \texttt{May 2018}
+    }
 }
-\newcommand{\ocupationkubeet}{
-    \en{Kubeet Landing}\es{Kubeet Landing}
-    \href{https://github.com/jesugq/kubeet-landing}{\faGithub}
+\newcommand{\titlekubeet}{
+    \en{
+        Kubeet Landing
+    }\es{
+        Kubeet Landing
+    }\href{https://github.com/jesugq/kubeet-landing}{\faGithub}
 }
-\newcommand{\enterprisekubeet}{}
-\newcommand{\descriptionkubeet}{
+\newcommand{\subtitlekubeet}{
+    Typescript, Angular 7, Firebase
+}
+\newcommand{\summarykubeet}{
     \en{
         \docbullet Maintenance of 13 Angular components related to the presentation of learning courses.\\
         \docbullet Adjunction to an online catalogue simulation of the sale of self-teaching material, hosted in a non-relational database.
@@ -152,18 +181,26 @@
         \docbullet Mantenimiento de 13 componentes Angular encargados de la presentación de cursos en línea.\\
         \docbullet Adición a un catálogo en línea para la simulación de la venta de material de autoenseñanza, alojado en una base de datos no relacional.
     }
-    \\ \texttt{Typescript} \docslash \texttt{Angular} \docslash \texttt{Firebase}
 }
 
-\newcommand{\periodcrafter}{
-    2018/01 - 2018/05
+\newcommand{\datecrafter}{
+    \en{
+        \texttt{May 2018}
+    }\es{
+        \texttt{May 2018}
+    }
 }
-\newcommand{\ocupationcrafter}{
-    \en{WCrafter}\es{WCrafter}
-    \href{https://github.com/jesugq/WCrafter-iOS}{\faGithub}
+\newcommand{\titlecrafter}{
+    \en{
+        WCrafter
+    }\es{
+        WCrafter
+    }\href{https://github.com/jesugq/WCrafter-iOS}{\faGithub}
 }
-\newcommand{\enterprisecrafter}{}
-\newcommand{\descriptioncrafter}{
+\newcommand{\subtitlecrafter}{
+    Swift
+}
+\newcommand{\summarycrafter}{
     \en{
         \docbullet Development of a prototype for a campus bus monitoring app for the iOS platform which would list available crafter type buses and present them to the user.\\
         \docbullet Usage of XCode's visual components for a 15 component responsive interface.
@@ -171,23 +208,30 @@
         \docbullet Desarrollo del prototipo de una aplicación de monitoreo de autobuses en una sede para la plataforma iOS, que presenta al usuario una lista de autobuses crafter disponibles.\\
         \docbullet Uso de los componentes visuales de XCode para crear una interfaz responsiva de 15 componentes.
     }
-    \\ \texttt{Swift}
 }
 
-\newcommand{\periodtutor}{
-    2018/08 - 2018/11
-}
-\newcommand{\ocupationtutor}{
-    \en{Online Tutor for Microsoft Office}\es{Tutoreo en Línea de Microsoft Office}
-}
-\newcommand{\enterprisetutor}{}
-\newcommand{\descriptiontutor}{
+\newcommand{\datetutor}{
     \en{
-        \docbullet Overseeing 12 students during their learnings of Microsoft Word \& Excel for a period of four months, creating for them a weekly agenda to facilitate of their studies.\\
-        \docbullet Advisory and evaluation given to the students via the PrepaNet platform hosted by the Tecnologico de Monterrey.
+        \texttt{Nov 2018}
     }\es{
-        \docbullet Seguimiento de 12 estudiantes durante su aprendizaje de Microsoft Word y Excel en un periodo de cuatro meses, generándoles una agenda semanal para facilitarles sus estudios.\\
-        \docbullet Evaluación y asesoría proporcionada a los estudiantes a través de la plataforma PrepaNet del Tecnológico de Monterrey.
+        \texttt{Nov 2018}
+    }
+}
+\newcommand{\titletutor}{
+    \en{
+        Online Tutor for Microsoft Office
+    }\es{
+        Tutoreo en Línea de Microsoft Office
+    }
+}
+\newcommand{\subtitletutor}{}
+\newcommand{\summarytutor}{
+    \en{
+        \docbullet Overseeing 12 students during their learnings of Microsoft Word \& Excel for a date of four months, creating for them a weekly agenda to facilitate of their studies.\\
+        \docbullet Advisory and evaluation given to the students via the PrepaNet platform hosted by Tecnologico de Monterrey.
+    }\es{
+        \docbullet Seguimiento de 12 estudiantes durante su aprendizaje de Microsoft Word y Excel en un dateo de cuatro meses, generándoles una agenda semanal para facilitarles sus estudios.\\
+        \docbullet Evaluación y asesoría otorgada a los estudiantes a través de la plataforma PrepaNet Tecnológico de Monterrey.
     }
 }
 
@@ -195,216 +239,29 @@
 %   Education
 %-------------------------------------------------------------------------------
 
-\newcommand{\periodengineer}{
-    2015/08 -- 2020/06
-}
-\newcommand{\ocupationengineer}{
-    \en{Professional Title}\es{Título Profesional}
-    \href{https://certificados.tec.mx/certificate/91410631a422581aaf1c6e4d1bf07cbb}{\faEdit}
-}
-\newcommand{\enterpriseengineer}{
-    Instituto Tecnológico y de Estudios Superiores de Monterrey
-}
-\newcommand{\descriptionengineer}{
+\newcommand{\dateengineer}{
     \en{
-        Computer Technologies Engineer, issued in Puebla, Puebla.
+        \texttt{Jun 2020\\Aug 2015}
     }\es{
-        Ingeniero en Tecnologías Computacionales, otorgado en Puebla, Puebla.
+        \texttt{Jun 2020\\Ago 2015}
+    }
+}
+\newcommand{\titleengineer}{
+    \en{
+        Instituto Tecnológico y de Estudios Superiores de Monterrey
+    }\es{
+        Instituto Tecnológico y de Estudios Superiores de Monterrey
+    }\href{https://certificados.tec.mx/certificate/91410631a422581aaf1c6e4d1bf07cbb}{\faEdit}
+}
+\newcommand{\subtitleengineer}{}
+\newcommand{\summaryengineer}{
+    \en{
+        Computer Technologies Engineer
+    }\es{
+        Ingeniero en Tecnologías Computacionales
     }
 }
 
 %-------------------------------------------------------------------------------
 %   Skills
 %-------------------------------------------------------------------------------
-
-\newcommand{\listprogramming}{
-    \en{
-        \cvskill{Java}
-
-        \begin{entrylist}
-            \entrysmall{2019}{3D Landscape}
-            \entrysmall{}{3D Tetrimino}
-            \entrysmall{2016}{OoP Classroom}
-            \entrysmall{}{OoP Poker}
-            \entrysmall{2015}{GUI Connect 4}
-            \entrysmall{}{GUI Othello}
-            \entrysmall{}{GUI Calculator}
-        \end{entrylist}
-
-        \cvskill{C}
-
-        \begin{entrylist}
-            \entrysmall{2019}{Generic Compiler}
-            \entrysmall{2017}{Residences Tree}
-            \entrysmall{}{Authors Tree}
-        \end{entrylist}
-
-        \cvskill{JavaScript}
-
-        \begin{entrylist}
-            \entrysmall{2017}{3JS AmuPark}
-            \entrysmall{}{3JS RobotArm}
-        \end{entrylist}
-    }\es{
-        \cvskill{Java}
-
-        \begin{entrylist}
-            \entrysmall{2019}{3D Paisaje}
-            \entrysmall{}{3D Tetrimino}
-            \entrysmall{2016}{OoP SalónClases}
-            \entrysmall{}{OoP Póker}
-            \entrysmall{2015}{GUI Conecta 4}
-            \entrysmall{}{GUI Othello}
-            \entrysmall{}{GUI Calculadora}
-        \end{entrylist}
-
-        \cvskill{C}
-
-        \begin{entrylist}
-            \entrysmall{2019}{Compilador Genérico}
-            \entrysmall{2017}{Residencias Árbol}
-            \entrysmall{}{Autores Árbol}
-        \end{entrylist}
-
-        \cvskill{JavaScript}
-
-        \begin{entrylist}
-            \entrysmall{2017}{3JS ParqueDiv}
-            \entrysmall{}{3JS BrazoRobot}
-        \end{entrylist}
-    }
-}
-
-\newcommand{\listwebdev}{
-    \en{
-        \cvskill{Python}
-
-        \begin{entrylist}
-            \entrysmall{2020}{Finance}
-        \end{entrylist}
-        
-        \vspace{3pt}
-        
-        \cvskill{Angular}
-        
-        \begin{entrylist}
-            \entrysmall{2019}{Vehicles}
-            \entrysmall{2018}{Kubeet Landing}
-        \end{entrylist}
-
-        \vspace{3pt}
-
-        \cvskill{React}
-
-        \begin{entrylist}
-            \entrysmall{2019}{MyAssessor}
-            \entrysmall{2018}{Simple Login}
-        \end{entrylist}
-    }\es{
-        \cvskill{Python}
-
-        \begin{entrylist}
-            \entrysmall{2020}{Finanzas}
-        \end{entrylist}
-
-        \vspace{3pt}
-
-        \cvskill{Angular}
-
-        \begin{entrylist}
-            \entrysmall{2019}{Vehicles}
-            \entrysmall{2018}{Kubeet Landing}
-        \end{entrylist}
-
-        \vspace{3pt}
-
-        \cvskill{React}
-
-        \begin{entrylist}
-            \entrysmall{2019}{MiAsesor}
-            \entrysmall{2018}{Login Sencillo}
-        \end{entrylist}
-    }
-}
-
-\newcommand{\listdevelopment}{
-    \en{
-        \vspace{3pt}
-
-        \begin{entrylist}
-            \entrysmall{scm}{Git}
-            \entrysmall{bash}{WSL2}
-            \entrysmall{ide}{VS Code}
-            \entrysmall{os}{Windows}
-        \end{entrylist}
-    }\es{
-        \vspace{3pt}
-
-        \begin{entrylist}
-            \entrysmall{scm}{Git}
-            \entrysmall{ide}{VS Code}
-            \entrysmall{os}{Windows}
-            \entrysmall{bash}{WSL2}
-        \end{entrylist}
-    }
-}
-
-\newcommand{\listlanguages}{
-    \en{
-        \vspace{3pt}
-
-        \begin{entrylist}
-            \entrysmall{\docbullet}{Spanish \small{(Native)}}
-        \end{entrylist}
-    }\es{
-        \vspace{3pt}
-
-        \begin{entrylist}
-            \entrysmall{\docbullet}{Inglés \small{(Uso diario)}}
-        \end{entrylist}
-    }
-}
-
-\newcommand{\listutilities}{
-    \en{
-        \vspace{3pt}
-
-        \begin{entrylist}
-            \entrysmall{\docbullet}{Microsoft Office}
-            \entrysmall{\docbullet}{Google Suite}
-            \entrysmall{\docbullet}{LaTeX}
-        \end{entrylist}
-    }\es{
-        \vspace{3pt}
-
-        \begin{entrylist}
-            \entrysmall{01}{Microsoft Office}
-            \entrysmall{02}{Google Suite}
-            \entrysmall{03}{LaTeX}
-        \end{entrylist}
-    }
-}
-
-\newcommand{\listtheory}{
-    \en{
-        \vspace{3pt}
-
-        \begin{entrylist}
-            \entrysmall{\docbullet}{Test-driven development}
-            \entrysmall{\docbullet}{Object-oriented programming}
-            \entrysmall{\docbullet}{UML diagramming}
-            \entrysmall{\docbullet}{Data structures}
-            \entrysmall{\docbullet}{Self-documenting code}
-        \end{entrylist}
-    }\es{
-        \vspace{3pt}
-
-        \begin{entrylist}
-            \entrysmall{\docbullet}{Desarrollo impulsado por pruebas}
-            \entrysmall{\docbullet}{Programación orientada a objetos}
-            \entrysmall{\docbullet}{Diagramas UML}
-            \entrysmall{\docbullet}{Estructuras de datos}
-            \entrysmall{\docbullet}{Código autodocumentado}
-        \end{entrylist}
-    }
-}

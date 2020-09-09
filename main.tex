@@ -10,7 +10,7 @@
 %   Document Configuration
 %-------------------------------------------------------------------------------
 
-\documentclass[9pt]{devcv}
+\documentclass[10pt]{devcv}
 \include{jesugq}
 \entrue
 %\estrue
@@ -23,91 +23,66 @@
 %   Personal Information
 %-------------------------------------------------------------------------------
 
-\begin{minipage}[t]{0.25\textwidth}
-    \vspace{-\baselineskip}
-
-    \icon{Phone}
-    \usernumb
-
-    \icon{MapMarker}
-    \userpost
-
-    \href{\linkmail}{\icon{At}}
-    \usermail
-    
-    \href{\linklinkedin}{\icon{Linkedin}}
-    \href{\linkgithub}{\icon{Github}}
-    \username
-\end{minipage}
-\begin{minipage}[t]{0.7\textwidth}
-    \vspace{-\baselineskip}
-
-    \HUGE{\firstname}
-
-    \vspace{-3pt}
-
-    \HUGE{\lastname}
-
-    \huge{\ocupation}
-\end{minipage}
-
-\vspace{\baselineskip}
+\begin{entrytable}
+    \entryheader
+        {\placeperson}
+        {\linksperson}
+        {\namesperson}
+\end{entrytable}
 
 %-------------------------------------------------------------------------------
 %   Personal Projects
 %-------------------------------------------------------------------------------
 
-\cvsect{\projects}
+\cvsection{\projects}
 
 \begin{entrylist}
-    \entry
-        {\periodcontact}
-        {\ocupationcontact}
-        {\enterprisecontact}
-        {\descriptioncontact}
-    \entry
-        {\periodcompiler}
-        {\ocupationcompiler}
-        {\enterprisecompiler}
-        {\descriptioncompiler}
-    \entry
-        {\periodkubeet}
-        {\ocupationkubeet}
-        {\enterprisekubeet}
-        {\descriptionkubeet}
-    \entry
-        {\periodcrafter}
-        {\ocupationcrafter}
-        {\enterprisecrafter}
-        {\descriptioncrafter}
-    \entry
-        {\periodtutor}
-        {\ocupationtutor}
-        {\enterprisetutor}
-        {\descriptiontutor}
+    \entrycommon
+        {\datecontact}
+        {\titlecontact}
+        {\subtitlecontact}
+        {\summarycontact}
+    \entrycommon
+        {\datecompiler}
+        {\titlecompiler}
+        {\subtitlecompiler}
+        {\summarycompiler}
+    \entrycommon
+        {\datekubeet}
+        {\titlekubeet}
+        {\subtitlekubeet}
+        {\summarykubeet}
+    \entrycommon
+        {\datecrafter}
+        {\titlecrafter}
+        {\subtitlecrafter}
+        {\summarycrafter}
+    \entrycommon
+        {\datetutor}
+        {\titletutor}
+        {\subtitletutor}
+        {\summarytutor}
 \end{entrylist}
-
-\vspace{-\baselineskip}
 
 %-------------------------------------------------------------------------------
 %   Education
 %-------------------------------------------------------------------------------
 
-\cvsect{\education}
+\cvsection{\education}
 
 \begin{entrylist}
-    \entry
-        {\periodengineer}
-        {\ocupationengineer}
-        {\enterpriseengineer}
-        {\descriptionengineer}
+    \entrycommon
+        {\dateengineer}
+        {\titleengineer}
+        {\subtitleengineer}
+        {\summaryengineer}
 \end{entrylist}
 
 %-------------------------------------------------------------------------------
 %   Skills
 %-------------------------------------------------------------------------------
 
-\cvsect{\skills}
+\cvsection{\skills}
 
 
 %-------------------------------------------------------------------------------
