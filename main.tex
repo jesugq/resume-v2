@@ -7,7 +7,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %-------------------------------------------------------------------------------
-%   Document Configuration
+%   Configuration
 %-------------------------------------------------------------------------------
 
 \documentclass[10pt]{devcv}
@@ -20,48 +20,62 @@
 \begin{document}
 
 %-------------------------------------------------------------------------------
-%   Personal Information
+%   Information
 %-------------------------------------------------------------------------------
 
 \begin{entrytable}
-    \entryheader
-        {\placeperson}
-        {\linksperson}
-        {\namesperson}
+    \entryperson
+        {\doclocation}
+        {\doccontacts}
+        {\doclargename}
 \end{entrytable}
 
 %-------------------------------------------------------------------------------
-%   Personal Projects
+%   Projects
 %-------------------------------------------------------------------------------
 
 \cvsection{\projects}
 
 \begin{entrylist}
-    \entrycommon
-        {\datecontact}
+    \entryproject
+        {\timecontact}
         {\titlecontact}
         {\subtitlecontact}
-        {\summarycontact}
-    \entrycommon
-        {\datecompiler}
+        {\descriptioncontact}
+    \entryproject
+        {\timefinance}
+        {\titlefinance}
+        {\subtitlefinance}
+        {\descriptionfinance}
+    \entryproject
+        {\timecompiler}
         {\titlecompiler}
         {\subtitlecompiler}
-        {\summarycompiler}
-    \entrycommon
-        {\datekubeet}
+        {\descriptioncompiler}
+    \entryproject
+        {\timekubeet}
         {\titlekubeet}
         {\subtitlekubeet}
-        {\summarykubeet}
-    \entrycommon
-        {\datecrafter}
+        {\descriptionkubeet}
+    \entryproject
+        {\timecrafter}
         {\titlecrafter}
         {\subtitlecrafter}
-        {\summarycrafter}
-    \entrycommon
-        {\datetutor}
+        {\descriptioncrafter}
+\end{entrylist}
+
+%-------------------------------------------------------------------------------
+%   Experience
+%-------------------------------------------------------------------------------
+
+\cvsection{\experience}
+
+\begin{entrylist}
+    \entryexperience
+        {\timetutor}
         {\titletutor}
         {\subtitletutor}
-        {\summarytutor}
+        {\descriptiontutor}
 \end{entrylist}
 
 %-------------------------------------------------------------------------------
@@ -71,11 +85,11 @@
 \cvsection{\education}
 
 \begin{entrylist}
-    \entrycommon
-        {\dateengineer}
+    \entryexperience
+        {\timeengineer}
         {\titleengineer}
         {\subtitleengineer}
-        {\summaryengineer}
+        {\descriptionengineer}
 \end{entrylist}
 
 %-------------------------------------------------------------------------------
@@ -84,6 +98,17 @@
 
 \cvsection{\skills}
 
+\begin{entrylist}
+    \entryskill
+        {\titlelanguages}
+        {\subtitlelanguages}
+    \entryskill
+        {\titletechnologies}
+        {\subtitletechnologies}
+    \entryskill
+        {\titletheory}
+        {\subtitletheory}
+\end{entrylist}
 
 %-------------------------------------------------------------------------------
 

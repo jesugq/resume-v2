@@ -31,12 +31,15 @@
 %----------------------------------------------------------------------------------------
 
 \setlength{\parindent}{0pt} % Suppress paragraph indentation
+\usepackage{enumitem} % Required for itemize customization
+\setlist{nolistsep} % Suppress itemize separation%
+\renewcommand\labelitemi{\scriptsize\faAngleRight} % Set normal circle as itemize
 \usepackage[hidelinks]{hyperref} % Required for links but hide the default boxes around links
 \usepackage{moresize} % Provides more font size commands (\HUGE and \ssmall)
 \usepackage{xcolor} % Provides more color types
 \usepackage{tabto} % Provides tab function
-\definecolor{lightgray}{gray}{0.99} % Light Gray color type
 \pagestyle{empty} % No headers or footers
+\definecolor{lightgray}{gray}{0.99} % Light Gray color type
 
 %----------------------------------------------------------------------------------------
 %	PAGE LAYOUT
@@ -62,8 +65,8 @@
 \usepackage[utf8]{inputenc} % Required for inputting international characters
 \usepackage[T1]{fontenc} % Output font encoding for international characters
 \usepackage{fetamont}
-%\usepackage[default]{raleway}
 %\usepackage[defaultsans]{droidsans}
+%\usepackage[default]{raleway}
 %\usepackage{cmbright}
 %\usepackage[default]{gillius}
 %\usepackage{roboto}
@@ -79,14 +82,9 @@
 	\colorbox{lightgray}{\makebox(2, 8){\large\csname fa#1\endcsname}} % Icon and box
 }
 
-%----------------------------------------------------------------------------------------
-%	CUSTOM SECTIONS
-%----------------------------------------------------------------------------------------
-
-
 % Command to output section title headings
 \newcommand{\cvsection}[1]{ % The only parameter is the section text
-	\hspace{-8pt}\colorbox{lightgray}{\makebox(80, 8){\MakeUppercase{\textit{#1}}\hfill}} % Section title
+	\hspace{-11pt}\colorbox{lightgray}{{\MakeUppercase{\textbf{#1}}\hfill}} % Section title
 	\hrulefill % Fill the empty space with a ruler
 }
 
@@ -112,24 +110,45 @@
 	\end{longtable}
 }
 
-\newcommand{\entryheader}[3]{% First argument for the leftmost date(s) text, second is for the bold entry heading, third is for the bold right-aligned entry qualifier and the fourth is for the entry description
-	&\parbox[t]{0.22\textwidth}{ % 22% of the text width of the page
+\newcommand{\entryskill}[2]{ % Two Arguments
+	\parbox[t]{0.15\textwidth}{ % 15% of the text width of the page
+		\hspace{-8pt}{\textbf#1} % Category text
+	}
+	\parbox[t]{0.85\textwidth}{ % 85% of the text width of the page
+		#2 % Category elements
+		\vspace{8pt}
+	}\\
+}
+
+\newcommand{\entryperson}[3]{ % Three Arguments
+	\parbox[t]{0.20\textwidth}{ % 20% of the text width of the page
 		#1 % Contact information text
 	}
-	\parbox[t]{0.56\textwidth}{ % 56% of the text width of the page
+	\parbox[t]{0.60\textwidth}{ % 60% of the text width of the page
 		\begin{center}#3\end{center} % Person information text
 	}
-	&\parbox[t]{0.22\textwidth}{ % 22% of the text width of the page
+	\parbox[t]{0.20\textwidth}{ % 20% of the text width of the page
 		#2 % Contact information text
 	}\\\\
 }
 
-\newcommand{\entrycommon}[4]{% First argument for the leftmost date(s) text, second is for the bold entry heading, third is for the bold right-aligned entry qualifier and the fourth is for the entry description
-	\parbox[t]{0.90\textwidth}{ % 90% of the text width of the page
-		\hspace{-8pt}\textbf{#2}\small{#3}\\ % Title and Subtitle
+\newcommand{\entryproject}[4]{ % Four Arguments
+	\parbox[t]{0.92\textwidth}{ % 90% of the text width of the page
+		\hspace{-8pt}{\textbf #2}{\small #3}\\ % Title and Subtitle
 		#4 % Bullet point text
 	}
-	&\parbox[t]{0.09\textwidth}{ % 10% of the text width of the page
-		\small{#1} % Date text
+	\parbox[t]{\textwidth}{ % 10% of the text width of the page
+		\hspace{-9.5pt}{\small \texttt #1} % Date text
+	}\\\\
+}
+
+\newcommand{\entryexperience}[4]{ % Four Arguments
+	\parbox[t]{0.92\textwidth}{ % 90% of the text width of the page
+		\hspace{-8pt}{\textbf #2}\\ % Title
+		\hspace{-8pt}{\textit #3}\\ % Subtitle
+		#4 % Bullet point text
+	}
+	\parbox[t]{\textwidth}{ % 10% of the text width of the page
+		\hspace{-9.5pt}{\small \texttt #1} % Date text
 	}\\\\
 }

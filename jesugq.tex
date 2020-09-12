@@ -6,7 +6,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %-------------------------------------------------------------------------------
-%   Document Configuration
+%   Configuration
 %-------------------------------------------------------------------------------
 
 \newif\ifen
@@ -18,49 +18,40 @@
     $\circ$
 }
 \newcommand{\docslash}{
-    \, / \,
+    \,{\scriptsize /} \,
 }
-
-%-------------------------------------------------------------------------------
-%   Personal Information
-%-------------------------------------------------------------------------------
-
-\newcommand{\placeperson}{
+\newcommand{\docitemize}[1]{
+    \vspace{-8pt}
+    \begin{itemize}
+        \setlength{\parskip}{4pt}
+        #1
+    \end{itemize}
+}
+\newcommand{\doclocation}{
     \vspace{-\baselineskip}
 
     \icon{Phone} \usernumb
 
     \icon{MapMarker} \userpost   
 }
-\newcommand{\linksperson}{
+\newcommand{\doccontacts}{
     \vspace{-\baselineskip}
-
-    \href{\linklinkedin}{\icon{Linkedin}} \href{\linkgithub}{\icon{Github}} \username
-    
+    \href{\linklinkedin}{\icon{Linkedin}} \href{\linkgithub}{\icon{Github}} \username\\
     \href{\linkmail}{\icon{Envelope}} \usermail
 }
-\newcommand{\namesperson}{
+\newcommand{\doclargename}{
     \vspace{-\baselineskip}
-    
-    \vspace{-4pt}
-
-    \HUGE{\shortname}
-
-    \vspace{-12pt}
+    \vspace{-8pt}
+    \HUGE{\textbf\userfull}
+    \vspace{-8pt}
 }
-\newcommand{\shortname}{
-    \en{
-        Jesus Gonzalez
-    }\es{
-        Jesús González
-    }
-}
-\newcommand{\ocupation}{
-    \en{
-        Computer Technologies Engineer
-    }\es{
-        Ingeniero en Tecnologías Computacionales
-    }
+
+%-------------------------------------------------------------------------------
+%   Information
+%-------------------------------------------------------------------------------
+
+\newcommand{\userfull}{
+    Jesus Gonzalez
 }
 \newcommand{\usernumb}{
     +52 271 108 5129
@@ -85,28 +76,47 @@
 }
 
 %-------------------------------------------------------------------------------
-%   Resume Titles
+%   Sections
 %-------------------------------------------------------------------------------
 
 \newcommand{\projects}{
-    \en{Projects}\es{Proyectos}
+    \en{
+        Projects
+    }\es{
+        Proyectos
+    }
+}
+\newcommand{\experience}{
+    \en{
+        Experience
+    }\es{
+        Experiencia
+    }
 }
 \newcommand{\education}{
-    \en{Education}\es{Educación}
+    \en{
+        Education
+    }\es{
+        Educación
+    }
 }
 \newcommand{\skills}{
-    \en{Skills}\es{Habilidades}
+    \en{
+        Skills
+    }\es{
+        Habilidades
+    }
 }
 
 %-------------------------------------------------------------------------------
 %   Projects
 %-------------------------------------------------------------------------------
 
-\newcommand{\datecontact}{
+\newcommand{\timecontact}{
     \en{
-        \texttt{Sep 2020}
+        Current
     }\es{
-        \texttt{Sep 2020}
+        Actual
     }
 }
 \newcommand{\titlecontact}{
@@ -117,121 +127,190 @@
     }\href{https://github.com/jesugq/contacts}{\faGithub}
 }
 \newcommand{\subtitlecontact}{
-    Python, Tkinter, MongoDB
-}
-\newcommand{\summarycontact}{
     \en{
-        \docbullet Implementation of a contact list for users with many social media accounts and phone numbers.\\
-        \docbullet Usage of a non-relational database to store users, their contacts and the system's available platforms in a flexible manner.
+        Python, Tkinter, MongoDB
     }\es{
-        \docbullet Implementación de una lista de contactos para usuarios con diferentes cuentas en redes sociales.\\
-        \docbullet Uso de una base de datos no relacional para el almacenamiento de los usuarios, sus contactos y plataformas disponibles de una manera flexible.
+        Python, Tkinter, MongoDB
+    }
+}
+\newcommand{\descriptioncontact}{
+    \docitemize{
+        \en{
+            \item Implementation of a contact list for users with many social media accounts and phone numbers.
+            \item Usage of a non-relational database to store users, their contacts and the system's available platforms in a flexible manner.
+        }\es{
+            \item Implementación de una lista de contactos para usuarios con diferentes cuentas en redes sociales.
+            \item Uso de una base de datos no relacional para el almacenamiento de los usuarios, sus contactos y plataformas disponibles de una manera flexible.
+        }
     }
 }
 
-\newcommand{\datecompiler}{
+\newcommand{\timefinance}{
     \en{
-        \texttt{Nov 2019}
+        Apr 2020
     }\es{
-        \texttt{Nov 2019}
+        Abr 2020
+    }
+}
+\newcommand{\titlefinance}{
+    \en{
+        Finance
+    }\es{
+        Finanza
+    }\href{https://github.com/jesugq/finance}{\faGithub}
+}
+\newcommand{\subtitlefinance}{
+    \en{
+        Python, Flask, SQLite
+    }\es{
+        Python, Flask, SQLite
+    }
+}
+\newcommand{\descriptionfinance}{
+    \docitemize{
+        \en{
+            \item Development of a web application that simulates selling and purchasing stocks.
+            \item Storage of users, their current stocks and their purchase-sell history on a simple relational database .
+        }\es{
+            \item Desarollo de una aplicación web que simula la compra y venta de acciones.
+            \item Almacenamiento de usuarios, sus acciones presentes y su historial de compra-venta en una base de datos relacional sencilla.
+        }
+    }
+}
+
+\newcommand{\timecompiler}{
+    \en{
+        Nov 2019
+    }\es{
+        Nov 2019
     }
 }
 \newcommand{\titlecompiler}{
     \en{
-        Generic Compiler
+        Compiler
     }\es{
-        Compilador Genérico
+        Compilador
     }\href{https://github.com/jesugq/compiler-simplified-syntax-tree}{\faGithub}
 }
 \newcommand{\subtitlecompiler}{
-    C, Flex, Bison
-}
-\newcommand{\summarycompiler}{
     \en{
-        \docbullet Implementation of a generic compiler for the recognition of a Leftmost Derivation Grammar (1).\\
-        \docbullet Usage of a simplified syntax tree along with a symbols and functions table to assert instructions.
+        C, Flex, Bison
     }\es{
-        \docbullet Implementación de un compilador que reconozca gramáticas de Derivación a la Izquierda (1).\\
-        \docbullet Uso de árbol sintáctico simplificado junto a una tabla de símbolos y funciones para leer instrucciones.
+        C, Flex, Bison
+    }
+}
+\newcommand{\descriptioncompiler}{
+    \docitemize{
+        \en{
+            \item Implementation of a generic compiler for the recognition of a Leftmost Derivation Grammar (1).
+            \item Usage of a simplified syntax tree along with a symbols and functions table to assert instructions.
+        }\es{
+            \item Implementación de un compilador que reconozca gramáticas de Derivación a la Izquierda (1).
+            \item Uso de árbol sintáctico simplificado junto a una tabla de símbolos y funciones para leer instrucciones.
+        }
     }
 }
 
-\newcommand{\datekubeet}{
+\newcommand{\timekubeet}{
     \en{
-        \texttt{May 2018}
+        May 2018
     }\es{
-        \texttt{May 2018}
+        May 2018
     }
 }
 \newcommand{\titlekubeet}{
     \en{
-        Kubeet Landing
+        Kubeet
     }\es{
-        Kubeet Landing
+        Kubeet
     }\href{https://github.com/jesugq/kubeet-landing}{\faGithub}
 }
 \newcommand{\subtitlekubeet}{
-    Typescript, Angular 7, Firebase
-}
-\newcommand{\summarykubeet}{
     \en{
-        \docbullet Maintenance of 13 Angular components related to the presentation of learning courses.\\
-        \docbullet Adjunction to an online catalogue simulation of the sale of self-teaching material, hosted in a non-relational database.
+        Typescript, Angular 7, Firebase
     }\es{
-        \docbullet Mantenimiento de 13 componentes Angular encargados de la presentación de cursos en línea.\\
-        \docbullet Adición a un catálogo en línea para la simulación de la venta de material de autoenseñanza, alojado en una base de datos no relacional.
+        Typescript, Angular 7, Firebase
+    }
+}
+\newcommand{\descriptionkubeet}{
+    \docitemize{
+        \en{
+            \item Maintenance of 13 Angular components related to the presentation of learning courses.
+            \item Adjunction to an online catalogue simulation of the sale of self-teaching material, hosted in a non-relational database.
+        }\es{
+            \item Mantenimiento de 13 componentes Angular encargados de la presentación de cursos en línea.
+            \item Adición a un catálogo en línea para la simulación de la venta de material de autoenseñanza, alojado en una base de datos no relacional.
+        }
     }
 }
 
-\newcommand{\datecrafter}{
+\newcommand{\timecrafter}{
     \en{
-        \texttt{May 2018}
+        May 2018
     }\es{
-        \texttt{May 2018}
+        May 2018
     }
 }
 \newcommand{\titlecrafter}{
     \en{
-        WCrafter
+        Crafter
     }\es{
-        WCrafter
+        Crafter
     }\href{https://github.com/jesugq/WCrafter-iOS}{\faGithub}
 }
 \newcommand{\subtitlecrafter}{
-    Swift
-}
-\newcommand{\summarycrafter}{
     \en{
-        \docbullet Development of a prototype for a campus bus monitoring app for the iOS platform which would list available crafter type buses and present them to the user.\\
-        \docbullet Usage of XCode's visual components for a 15 component responsive interface.
+        Swift
     }\es{
-        \docbullet Desarrollo del prototipo de una aplicación de monitoreo de autobuses en una sede para la plataforma iOS, que presenta al usuario una lista de autobuses crafter disponibles.\\
-        \docbullet Uso de los componentes visuales de XCode para crear una interfaz responsiva de 15 componentes.
+        Swift
+    }
+}
+\newcommand{\descriptioncrafter}{
+    \docitemize{
+        \en{
+            \item Development of a prototype for a campus bus monitoring app for the iOS platform which would list available crafter type buses and present them to the user.
+            \item Usage of XCode's visual components for a 15 component responsive interface.
+        }\es{
+            \item Desarrollo del prototipo de una aplicación de monitoreo de autobuses en una sede para la plataforma iOS, que presenta al usuario una lista de autobuses crafter disponibles.
+            \item Uso de los componentes visuales de XCode para crear una interfaz responsiva de 15 componentes.
+        }
     }
 }
 
-\newcommand{\datetutor}{
+%-------------------------------------------------------------------------------
+%   Experience
+%-------------------------------------------------------------------------------
+
+\newcommand{\timetutor}{
     \en{
-        \texttt{Nov 2018}
+        Nov 2018\\Aug 2018
     }\es{
-        \texttt{Nov 2018}
+        Nov 2018\\Aug 2018
     }
 }
 \newcommand{\titletutor}{
     \en{
-        Online Tutor for Microsoft Office
+        Tecnologico de Monterrey
     }\es{
-        Tutoreo en Línea de Microsoft Office
+        Tecnológico de Monterrey
     }
 }
-\newcommand{\subtitletutor}{}
-\newcommand{\summarytutor}{
+\newcommand{\subtitletutor}{
     \en{
-        \docbullet Overseeing 12 students during their learnings of Microsoft Word \& Excel for a date of four months, creating for them a weekly agenda to facilitate of their studies.\\
-        \docbullet Advisory and evaluation given to the students via the PrepaNet platform hosted by Tecnologico de Monterrey.
+        Online Tutor for Microsoft Office \docslash Cordoba, Veracruz
     }\es{
-        \docbullet Seguimiento de 12 estudiantes durante su aprendizaje de Microsoft Word y Excel en un dateo de cuatro meses, generándoles una agenda semanal para facilitarles sus estudios.\\
-        \docbullet Evaluación y asesoría otorgada a los estudiantes a través de la plataforma PrepaNet Tecnológico de Monterrey.
+        Tutor en Línea de Microsoft Office \docslash Córdoba, Veracruz
+    }
+}
+\newcommand{\descriptiontutor}{
+    \docitemize{
+        \en{
+            \item Overseeing 12 students during their learnings of Microsoft Word \& Excel for a period of four months, creating for them a weekly agenda to facilitate of their studies.
+            \item Advisory and evaluation given to the students via the PrepaNet platform hosted by Tecnologico de Monterrey.
+        }\es{
+            \item Seguimiento de 12 estudiantes durante su aprendizaje de Microsoft Word y Excel en un periodo de cuatro meses, generándoles una agenda semanal para facilitarles sus estudios.
+            \item Evaluación y asesoría otorgada a los estudiantes a través de la plataforma PrepaNet Tecnológico de Monterrey.
+        }
     }
 }
 
@@ -239,29 +318,76 @@
 %   Education
 %-------------------------------------------------------------------------------
 
-\newcommand{\dateengineer}{
+\newcommand{\timeengineer}{
     \en{
-        \texttt{Jun 2020\\Aug 2015}
+        Jun 2020\\Aug 2015
     }\es{
-        \texttt{Jun 2020\\Ago 2015}
+        Jun 2020\\Ago 2015
     }
 }
 \newcommand{\titleengineer}{
     \en{
-        Instituto Tecnológico y de Estudios Superiores de Monterrey
+        Tecnologico de Monterrey
     }\es{
-        Instituto Tecnológico y de Estudios Superiores de Monterrey
+        Tecnológico de Monterrey
     }\href{https://certificados.tec.mx/certificate/91410631a422581aaf1c6e4d1bf07cbb}{\faEdit}
 }
-\newcommand{\subtitleengineer}{}
-\newcommand{\summaryengineer}{
+\newcommand{\subtitleengineer}{
     \en{
-        Computer Technologies Engineer
+        Computer Technologies Engineer \docslash Puebla, Puebla
     }\es{
-        Ingeniero en Tecnologías Computacionales
+        Ingeniero en Tecnologías Computacionales \docslash Puebla, Puebla
     }
+}
+\newcommand{\descriptionengineer}{
+    \vspace{-8pt}
 }
 
 %-------------------------------------------------------------------------------
 %   Skills
 %-------------------------------------------------------------------------------
+
+\newcommand{\titlelanguages}{
+    \en{
+        Languages
+    }\es{
+        Lenguajes
+    }
+}
+\newcommand{\subtitlelanguages}{
+    \en{
+        Java, Python \docslash C \docslash MySQL, MongoDB \docslash Javascript, HTML, CSS 
+    }\es{
+        Java, Python \docslash C \docslash MySQL, MongoDB \docslash Javascript, HTML, CSS 
+    }
+}
+
+\newcommand{\titletechnologies}{
+    \en{
+        Technologies
+    }\es{
+        Tecnologías
+    }
+}
+\newcommand{\subtitletechnologies}{
+    \en{
+        Angular, React \docslash Git, Bash \docslash Latex, M.Office, G.Suite
+    }\es{
+        Angular, React \docslash Git, Bash \docslash Latex, M.Office, G.Suite
+    }
+}
+
+\newcommand{\titletheory}{
+    \en{
+        Theory
+    }\es{
+        Teoría
+    }
+}
+\newcommand{\subtitletheory}{
+    \en{
+        Test-Driven Development \docslash Data Structures, Algorithm Design
+    }\es{
+        Desarrollo Basado en Pruebas \docslash Estructuras de Datos, Diseño de Algoritmos
+    }
+}
