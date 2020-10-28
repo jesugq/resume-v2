@@ -1,21 +1,12 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Resume Text
-% LaTeX Document
-% 
-% Jesus Antonio Gonzalez Quevedo
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%-------------------------------------------------------------------------------
+%------------------
 %   Configuration
-%-------------------------------------------------------------------------------
+%------------------
 
-\newif\ifen
-\newif\ifes
-\newcommand{\en}[1]{\ifen#1\fi}
-\newcommand{\es}[1]{\ifes#1\fi}
-
-\newcommand{\docbullet}{
-    $\circ$
+\newcommand{\docnull}{
+    \vspace{-8pt}
+}
+\newcommand{\doclink}[1]{
+    \href{#1}{\faGithub}
 }
 \newcommand{\docslash}{
     \,{\scriptsize /} \,
@@ -27,6 +18,11 @@
         #1
     \end{itemize}
 }
+
+%------------------
+%   Information
+%------------------
+
 \newcommand{\doclocation}{
     \vspace{-\baselineskip}
 
@@ -46,12 +42,8 @@
     \vspace{-8pt}
 }
 
-%-------------------------------------------------------------------------------
-%   Information
-%-------------------------------------------------------------------------------
-
 \newcommand{\userfull}{
-    Jesus Gonzalez
+    JESUS GONZALEZ
 }
 \newcommand{\usernumb}{
     +52 271 108 5129
@@ -73,321 +65,4 @@
 }
 \newcommand{\linklinkedin}{
     https://www.linkedin.com/in/jesugq/
-}
-
-%-------------------------------------------------------------------------------
-%   Sections
-%-------------------------------------------------------------------------------
-
-\newcommand{\projects}{
-    \en{
-        Projects
-    }\es{
-        Proyectos
-    }
-}
-\newcommand{\experience}{
-    \en{
-        Experience
-    }\es{
-        Experiencia
-    }
-}
-\newcommand{\education}{
-    \en{
-        Education
-    }\es{
-        Educación
-    }
-}
-\newcommand{\skills}{
-    \en{
-        Skills
-    }\es{
-        Habilidades
-    }
-}
-
-%-------------------------------------------------------------------------------
-%   Projects
-%-------------------------------------------------------------------------------
-
-\newcommand{\timecontact}{
-    \en{
-        Current
-    }\es{
-        Actual
-    }
-}
-\newcommand{\titlecontact}{
-    \en{
-        Contacts
-    }\es{
-        Contactos
-    }\href{https://github.com/jesugq/contacts}{\faGithub}
-}
-\newcommand{\subtitlecontact}{
-    \en{
-        Python, Tkinter, MongoDB
-    }\es{
-        Python, Tkinter, MongoDB
-    }
-}
-\newcommand{\descriptioncontact}{
-    \docitemize{
-        \en{
-            \item Implementation of a contact list for users with many social media accounts and phone numbers.
-            \item Usage of a non-relational database to store users, their contacts and the system's available platforms in a flexible manner.
-        }\es{
-            \item Implementación de una lista de contactos para usuarios con diferentes cuentas en redes sociales.
-            \item Uso de una base de datos no relacional para el almacenamiento de los usuarios, sus contactos y plataformas disponibles de una manera flexible.
-        }
-    }
-}
-
-\newcommand{\timefinance}{
-    \en{
-        Apr 2020
-    }\es{
-        Abr 2020
-    }
-}
-\newcommand{\titlefinance}{
-    \en{
-        Finance
-    }\es{
-        Finanza
-    }\href{https://github.com/jesugq/finance}{\faGithub}
-}
-\newcommand{\subtitlefinance}{
-    \en{
-        Python, Flask, SQLite
-    }\es{
-        Python, Flask, SQLite
-    }
-}
-\newcommand{\descriptionfinance}{
-    \docitemize{
-        \en{
-            \item Development of a web application that simulates selling and purchasing stocks.
-            \item Storage of users, their current stocks and their purchase-sell history on a simple relational database .
-        }\es{
-            \item Desarollo de una aplicación web que simula la compra y venta de acciones.
-            \item Almacenamiento de usuarios, sus acciones presentes y su historial de compra-venta en una base de datos relacional sencilla.
-        }
-    }
-}
-
-\newcommand{\timecompiler}{
-    \en{
-        Nov 2019
-    }\es{
-        Nov 2019
-    }
-}
-\newcommand{\titlecompiler}{
-    \en{
-        Compiler
-    }\es{
-        Compilador
-    }\href{https://github.com/jesugq/compiler-simplified-syntax-tree}{\faGithub}
-}
-\newcommand{\subtitlecompiler}{
-    \en{
-        C, Flex, Bison
-    }\es{
-        C, Flex, Bison
-    }
-}
-\newcommand{\descriptioncompiler}{
-    \docitemize{
-        \en{
-            \item Implementation of a generic compiler for the recognition of a Leftmost Derivation Grammar (1).
-            \item Usage of a simplified syntax tree along with a symbols and functions table to assert instructions.
-        }\es{
-            \item Implementación de un compilador que reconozca gramáticas de Derivación a la Izquierda (1).
-            \item Uso de árbol sintáctico simplificado junto a una tabla de símbolos y funciones para leer instrucciones.
-        }
-    }
-}
-
-\newcommand{\timekubeet}{
-    \en{
-        May 2018
-    }\es{
-        May 2018
-    }
-}
-\newcommand{\titlekubeet}{
-    \en{
-        Kubeet
-    }\es{
-        Kubeet
-    }\href{https://github.com/jesugq/kubeet-landing}{\faGithub}
-}
-\newcommand{\subtitlekubeet}{
-    \en{
-        Typescript, Angular 7, Firebase
-    }\es{
-        Typescript, Angular 7, Firebase
-    }
-}
-\newcommand{\descriptionkubeet}{
-    \docitemize{
-        \en{
-            \item Maintenance of 13 Angular components related to the presentation of learning courses.
-            \item Adjunction to an online catalogue simulation of the sale of self-teaching material, hosted in a non-relational database.
-        }\es{
-            \item Mantenimiento de 13 componentes Angular encargados de la presentación de cursos en línea.
-            \item Adición a un catálogo en línea para la simulación de la venta de material de autoenseñanza, alojado en una base de datos no relacional.
-        }
-    }
-}
-
-\newcommand{\timecrafter}{
-    \en{
-        May 2018
-    }\es{
-        May 2018
-    }
-}
-\newcommand{\titlecrafter}{
-    \en{
-        Crafter
-    }\es{
-        Crafter
-    }\href{https://github.com/jesugq/WCrafter-iOS}{\faGithub}
-}
-\newcommand{\subtitlecrafter}{
-    \en{
-        Swift
-    }\es{
-        Swift
-    }
-}
-\newcommand{\descriptioncrafter}{
-    \docitemize{
-        \en{
-            \item Development of a prototype for a campus bus monitoring app for the iOS platform which would list available crafter type buses and present them to the user.
-            \item Usage of XCode's visual components for a 15 component responsive interface.
-        }\es{
-            \item Desarrollo del prototipo de una aplicación de monitoreo de autobuses en una sede para la plataforma iOS, que presenta al usuario una lista de autobuses crafter disponibles.
-            \item Uso de los componentes visuales de XCode para crear una interfaz responsiva de 15 componentes.
-        }
-    }
-}
-
-%-------------------------------------------------------------------------------
-%   Experience
-%-------------------------------------------------------------------------------
-
-\newcommand{\timetutor}{
-    \en{
-        Nov 2018\\Aug 2018
-    }\es{
-        Nov 2018\\Aug 2018
-    }
-}
-\newcommand{\titletutor}{
-    \en{
-        Tecnologico de Monterrey
-    }\es{
-        Tecnológico de Monterrey
-    }
-}
-\newcommand{\subtitletutor}{
-    \en{
-        Online Tutor for Microsoft Office \docslash Cordoba, Veracruz
-    }\es{
-        Tutor en Línea de Microsoft Office \docslash Córdoba, Veracruz
-    }
-}
-\newcommand{\descriptiontutor}{
-    \docitemize{
-        \en{
-            \item Overseeing 12 students during their learnings of Microsoft Word \& Excel for a period of four months, creating for them a weekly agenda to facilitate of their studies.
-            \item Advisory and evaluation given to the students via the PrepaNet platform hosted by Tecnologico de Monterrey.
-        }\es{
-            \item Seguimiento de 12 estudiantes durante su aprendizaje de Microsoft Word y Excel en un periodo de cuatro meses, generándoles una agenda semanal para facilitarles sus estudios.
-            \item Evaluación y asesoría otorgada a los estudiantes a través de la plataforma PrepaNet Tecnológico de Monterrey.
-        }
-    }
-}
-
-%-------------------------------------------------------------------------------
-%   Education
-%-------------------------------------------------------------------------------
-
-\newcommand{\timeengineer}{
-    \en{
-        Jun 2020\\Aug 2015
-    }\es{
-        Jun 2020\\Ago 2015
-    }
-}
-\newcommand{\titleengineer}{
-    \en{
-        Tecnologico de Monterrey
-    }\es{
-        Tecnológico de Monterrey
-    }\href{https://certificados.tec.mx/certificate/91410631a422581aaf1c6e4d1bf07cbb}{\faEdit}
-}
-\newcommand{\subtitleengineer}{
-    \en{
-        Computer Technologies Engineer \docslash Puebla, Puebla
-    }\es{
-        Ingeniero en Tecnologías Computacionales \docslash Puebla, Puebla
-    }
-}
-\newcommand{\descriptionengineer}{
-    \vspace{-8pt}
-}
-
-%-------------------------------------------------------------------------------
-%   Skills
-%-------------------------------------------------------------------------------
-
-\newcommand{\titlelanguages}{
-    \en{
-        Languages
-    }\es{
-        Lenguajes
-    }
-}
-\newcommand{\subtitlelanguages}{
-    \en{
-        Java, Python \docslash C \docslash MySQL, MongoDB \docslash Javascript, HTML, CSS 
-    }\es{
-        Java, Python \docslash C \docslash MySQL, MongoDB \docslash Javascript, HTML, CSS 
-    }
-}
-
-\newcommand{\titletechnologies}{
-    \en{
-        Technologies
-    }\es{
-        Tecnologías
-    }
-}
-\newcommand{\subtitletechnologies}{
-    \en{
-        Angular, React \docslash Git, Bash \docslash Latex, M.Office, G.Suite
-    }\es{
-        Angular, React \docslash Git, Bash \docslash Latex, M.Office, G.Suite
-    }
-}
-
-\newcommand{\titletheory}{
-    \en{
-        Theory
-    }\es{
-        Teoría
-    }
-}
-\newcommand{\subtitletheory}{
-    \en{
-        Test-Driven Development \docslash Data Structures, Algorithm Design
-    }\es{
-        Desarrollo Basado en Pruebas \docslash Estructuras de Datos, Diseño de Algoritmos
-    }
 }
