@@ -2,15 +2,18 @@
 %   Configuration
 %------------------
 
-\newcommand{\docnull}{
-    \vspace{-8pt}
+\newcommand{\doclink}[2]{
+    \href{#1}{\docicon{#2}}
 }
-\newcommand{\doclink}[1]{
-    \href{#1}{\faGithub}
-}
+
 \newcommand{\docslash}{
     \,{\scriptsize /} \,
 }
+
+\newcommand{\docicon}[1] {
+	\colorbox{lightgray}{\makebox(6, 4){\large\csname fa#1\endcsname}}
+}
+
 \newcommand{\docitemize}[1]{
     \vspace{-8pt}
     \begin{itemize}
@@ -19,50 +22,28 @@
     \end{itemize}
 }
 
-%------------------
-%   Information
-%------------------
+\newcommand{\docsection}[1]{
+	\vspace{4pt}
+	{\MakeUppercase{\textbf{\large{#1}}}}
+	\hrulefill
+	\vspace{4pt}
+}
 
 \newcommand{\doclocation}{
-    \vspace{-\baselineskip}
+    \docicon{Phone} \usernumb
 
-    \icon{Phone} \usernumb
-
-    \icon{MapMarker} \userpost   
+    \docicon{MapMarker} \userpost   
 }
+
 \newcommand{\doccontacts}{
-    \vspace{-\baselineskip}
-    \href{\linklinkedin}{\icon{Linkedin}} \href{\linkgithub}{\icon{Github}} \username\\
-    \href{\linkmail}{\icon{Envelope}} \usermail
-}
-\newcommand{\doclargename}{
-    \vspace{-\baselineskip}
-    \vspace{-8pt}
-    \HUGE{\textbf\userfull}
-    \vspace{-8pt}
+    \doclink{mailto:jesugq@gmail.com}{Envelope}
+    \usermail
+
+    \doclink{https://github.com/jesugq}{Linkedin}
+    \doclink{https://www.linkedin.com/in/jesugq/}{Github}
+    \username
 }
 
-\newcommand{\userfull}{
-    JESUS GONZALEZ
-}
-\newcommand{\usernumb}{
-    +52 271 108 5129
-}
-\newcommand{\usermail}{
-    jesugq@gmail.com
-}
-\newcommand{\username}{
-    jesugq
-}
-\newcommand{\userpost}{
-    Puebla de Zaragoza
-}
-\newcommand{\linkmail}{
-    mailto:jesugq@gmail.com
-}
-\newcommand{\linkgithub}{
-    https://github.com/jesugq
-}
-\newcommand{\linklinkedin}{
-    https://www.linkedin.com/in/jesugq/
+\newcommand{\doclargename}{
+    \HUGE{\textbf\userfull}
 }
