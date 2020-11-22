@@ -15,7 +15,7 @@
 \setlength{\parindent}{0pt}
 \usepackage{enumitem}
 \setlist{nolistsep}
-\renewcommand\labelitemi{\scriptsize\faAngleRight}
+\renewcommand\labelitemi{\scriptsize \faAngleRight}
 \usepackage[hidelinks]{hyperref}
 \usepackage{moresize}
 \usepackage{xcolor}
