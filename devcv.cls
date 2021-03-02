@@ -29,13 +29,13 @@
 \usepackage{geometry}
 \geometry{
 	paper=a4paper,
-	top=1.75cm,
-	bottom=1.75cm,
+	top=1.5cm,
+	bottom=1.5cm,
 	left=1.5cm,
 	right=1.5cm,
-	headheight=0.75cm,
-	footskip=1cm,
-	headsep=0.5cm,
+	headheight=0cm,
+	footskip=0cm,
+	headsep=0cm,
 }
 
 %------------------
