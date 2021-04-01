@@ -12,15 +12,16 @@
 %   Packages
 %------------------
 
-\setlength{\parindent}{0pt}
+
 \usepackage{enumitem}
-\setlist{nolistsep}
 \usepackage[hidelinks]{hyperref}
+\usepackage[strict]{changepage}
 \usepackage{moresize}
+\usepackage{setspace}
 \usepackage{xcolor}
 \usepackage{tabto}
 \pagestyle{empty}
-\definecolor{lightgray}{gray}{0.975}
+\setlength{\parindent}{0pt}
 
 %------------------
 %   Layout
@@ -52,8 +53,8 @@
 %------------------
 
 \usepackage{longtable}
-\setlength{\LTpre}{6pt}
-\setlength{\LTpost}{-6pt}
+\setlength{\LTpre}{0pt}
+\setlength{\LTpost}{0pt}
 \setlength{\tabcolsep}{0pt}
 
 \newenvironment{entrytable}{
@@ -68,41 +69,49 @@
 	\end{longtable}
 }
 
+\newenvironment{entrytext}{
+	\vspace{32pt}
+	\large
+	\begin{adjustwidth}{1.5cm}{1.5cm}
+}{
+	\end{adjustwidth}
+}
+
 \newcommand{\entryskill}[2]{
 	\parbox[t]{0.15\textwidth}{
 		{\textbf#1}
 	}
 	\parbox[t]{0.85\textwidth}{
 		#2
-		\vspace{8pt}
-	}\\
+	}\\\\
 }
 
 \newcommand{\entryperson}[3]{
-	\parbox[t]{0.50\textwidth}{
-		\vspace{-\baselineskip}
-		#3
-	}
-	\parbox[t]{0.25\textwidth}{
+	\parbox[t]{0.55\textwidth}{
 		\vspace{-\baselineskip}
 		#1
 	}
-	\parbox[t]{0.25\textwidth}{
-		\vspace{-\baselineskip}	
+	\parbox[t]{0.20\textwidth}{
+		\vspace{-\baselineskip}
 		#2
-	}\\\\
+	}
+	\parbox[t]{0.20\textwidth}{
+		\vspace{-\baselineskip}	
+		#3
+	}\\
+	\vspace{-8pt}
 }
 
 \newcommand{\entryproject}[4]{
 	\parbox[t]{1\textwidth}{
-		{\textbf #2}{\small #3}\hfill{\small \texttt #1}\\
+		{\textbf #2}{\small #3}\hfill{\small \texttt #1}
 		#4
-	}\\\\
+	}\\
 }
 
 \newcommand{\entryexperience}[4]{
 	\parbox[t]{1\textwidth}{
-		{\textbf #2}{\small #3}\hfill{\small \texttt #1}\\
+		{\textbf #2}{\small #3}\hfill{\small \texttt #1}
 		#4
-	}\\\\
+	}\\
 }

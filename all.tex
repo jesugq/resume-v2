@@ -11,58 +11,42 @@
 }
 
 \newcommand{\docicon}[1] {
-	\colorbox{lightgray}{\makebox(6, 4){\large\csname fa#1\endcsname}}
+	\makebox(2, 5){\csname #1\endcsname}
 }
 
 \newcommand{\docitemize}[1]{
-    \vspace{-8pt}
     \begin{itemize}
-        \setlength{\parskip}{4pt}
+        \setlength{\parskip}{0pt}
         #1
     \end{itemize}
 }
 
 \newcommand{\docsection}[1]{
-	\vspace{4pt}
+    \hspace{-4pt}
 	{\MakeUppercase{\textbf{\large{#1}}}}
 	\hrulefill
-	\vspace{4pt}
+	\vspace{8pt}
 }
 
 \newcommand{\doclocation}{
-    \docicon{Phone} \usernumbm
+    \docicon{faPhone} \usernumbwork
 
-    \docicon{Phone} \usernumbw
+    \docicon{faPhone} \usernumbmain
 
-    \docicon{MapMarker} \userpost  
+    \docicon{faMapMarker} \userpost  
 }
 
 \newcommand{\doccontacts}{
-    \doclink{mailto:jesugq@gmail.com}{Envelope}
+    \doclink{mailto:jesugq@gmail.com}{faEnvelope}
     \usermail
-
-    \doclink{https://t.me/jesugq}{PaperPlane}
-    \doclink{https://github.com/jesugq}{Github}
-    \username
+    
+    \footnotesize\doclink{https://t.me/jesugq}{faPaperPlane}\normalsize
+    \doclink{https://twitter.com/home}{faTwitter}
+    \usernamet
 }
 
 \newcommand{\doclargename}{
-    \HUGE{\textbf\userfull}
-}
+    \hspace{-12pt}\HUGE{\textbf\userfull}
 
-\newcommand{\docgeometry}{
-    \geometry{
-        paper=a4paper,
-        top=4cm,
-        bottom=4cm,
-        left=3cm,
-        right=3cm,
-        headheight=1cm,
-        footskip=1cm,
-        headsep=1cm,
-    }
-}
-
-\newcommand{\docskip}{
-    \vspace{15pt}
+    \Large{\userdiploma}
 }
