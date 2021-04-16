@@ -77,6 +77,12 @@
 	\end{adjustwidth}
 }
 
+\newcommand{\entryprofile}[1]{
+	\parbox[t]{0.80\textwidth}{
+		#1
+	}\\\vspace{-4pt}
+}
+
 \newcommand{\entryskill}[2]{
 	\parbox[t]{0.15\textwidth}{
 		{\textbf#1}
@@ -98,8 +104,7 @@
 	\parbox[t]{0.20\textwidth}{
 		\vspace{-\baselineskip}	
 		#3
-	}\\
-	\vspace{-8pt}
+	}\\\vspace{-4pt}
 }
 
 \newcommand{\entryproject}[4]{
