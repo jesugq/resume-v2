@@ -11,7 +11,7 @@
 }
 
 \newcommand{\docicon}[1] {
-	\makebox(2, 5){\csname #1\endcsname}
+	\textcolor{blue}{\makebox(2, 5){\csname #1\endcsname}}
 }
 
 \newcommand{\docitemize}[1]{
@@ -30,20 +30,24 @@
 }
 
 \newcommand{\doclocation}{
-    \docicon{faPhone} \usernumbwork
-
     \docicon{faPhone} \usernumbmain
 
     \docicon{faMapMarker} \userpost  
 }
 
 \newcommand{\doccontacts}{
+    \footnotesize
+    \doclink{https://t.me/jesugq_tel}{faPaperPlane}
+    \normalsize
+    \hspace{-2pt}
+    \usernamet
+    
+    \doclink{https://wa.me/522711085129}{faWhatsapp}
+    \hspace{-4pt}
+    \usernumbmain
+
     \doclink{mailto:jesugq@gmail.com}{faEnvelope}
     \usermail
-    
-    \footnotesize\doclink{https://t.me/jesugq}{faPaperPlane}\normalsize
-    \doclink{https://twitter.com/home}{faTwitter}
-    \usernamet
 }
 
 \newcommand{\doclargename}{
