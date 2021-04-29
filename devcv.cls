@@ -45,7 +45,7 @@
 
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage{fetamont}
+\usepackage{palatino}
 \usepackage{fontawesome}
 
 %------------------
@@ -108,15 +108,15 @@
 }
 
 \newcommand{\entryproject}[4]{
-	\parbox[t]{1\textwidth}{
-		{\textbf #2}{\small #3}\hfill{\small \texttt #1}
+	\parbox[t]{1.01\textwidth}{
+		{\textbf #2}{\small #3}\hfill\textcolor{blue}{\small \textbf#1}
 		#4
 	}\\
 }
 
 \newcommand{\entryexperience}[4]{
-	\parbox[t]{1\textwidth}{
-		{\textbf #2}{\small #3}\hfill{\small \texttt #1}
+	\parbox[t]{1.01\textwidth}{
+		{\textbf #2}{\small #3}\hfill\textcolor{blue}{\small \textbf#1}
 		#4
 	}\\
 }

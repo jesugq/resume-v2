@@ -2,12 +2,18 @@
 %   Configuration
 %------------------
 
+\newcommand{\docbold}[1]{
+    \textit{\textbf{#1}}
+}
+
 \newcommand{\doclink}[2]{
     \href{#1}{\docicon{#2}}
 }
 
-\newcommand{\docslash}{
-    {\scriptsize,}\,\,
+\newcommand{\docplus}{
+    \hspace{-5pt}
+    \textcolor{blue}{\tiny\faPlus\normalsize}
+    \hspace{-4pt}
 }
 
 \newcommand{\docicon}[1] {
@@ -15,6 +21,7 @@
 }
 
 \newcommand{\docitemize}[1]{
+    \vspace{-4pt}
     \begin{itemize}
         \setlength{\parskip}{0pt}
         #1
@@ -22,36 +29,39 @@
 }
 
 \newcommand{\docsection}[1]{
-    \vspace{-4pt}
-	\hrulefill
-	\textbf{\large{#1}}
-    \hrulefill\\
-    \vspace{-4pt}
+    \vspace{-2pt}
+    \textcolor{blue}{
+        \hrulefill
+        \textbf{\large{#1}}
+        \hrulefill\\
+    }
+    \vspace{-2pt}
 }
 
 \newcommand{\doclocation}{
-    \docicon{faPhone} \usernumbmain
+    \docicon{faPhone} \usernumbwork
 
     \docicon{faMapMarker} \userpost  
 }
 
 \newcommand{\doccontacts}{
+    \doclink{https://wa.me/522711085129}{faWhatsapp}
+    \usernumbwork
+
     \footnotesize
     \doclink{https://t.me/jesugq_tel}{faPaperPlane}
     \normalsize
-    \hspace{-2pt}
+    \hspace{-0.5pt}
     \usernamet
-    
-    \doclink{https://wa.me/522711085129}{faWhatsapp}
-    \hspace{-4pt}
-    \usernumbmain
 
     \doclink{mailto:jesugq@gmail.com}{faEnvelope}
     \usermail
 }
 
 \newcommand{\doclargename}{
-    \hspace{-12pt}\HUGE{\textbf\userfull}
-
-    \Large{\userdiploma}
+    \hspace{-16pt}
+    \HUGE{\userfull}
+    
+    \hspace{-18pt}
+    \Large\textcolor{blue}{{\userdiploma}}
 }
