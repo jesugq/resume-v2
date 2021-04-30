@@ -45,7 +45,7 @@
 
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage{palatino}
+\usepackage{fetamont}
 \usepackage{fontawesome}
 
 %------------------
@@ -71,8 +71,8 @@
 
 \newenvironment{entrytext}{
 	\vspace{32pt}
+	\begin{adjustwidth}{1.25cm}{1.25cm}
 	\large
-	\begin{adjustwidth}{1.5cm}{1.5cm}
 }{
 	\end{adjustwidth}
 }
