@@ -20,6 +20,7 @@
 \usepackage{setspace}
 \usepackage{xcolor}
 \usepackage{tabto}
+\usepackage{calc}
 \pagestyle{empty}
 \setlength{\parindent}{0pt}
 
@@ -70,7 +71,7 @@
 }
 
 \newenvironment{entrytext}{
-	\vspace{32pt}
+	\vspace{16pt}
 	\begin{adjustwidth}{1.25cm}{1.25cm}
 	\large
 }{
