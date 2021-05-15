@@ -2,12 +2,21 @@
 %   Configuration
 %------------------
 
+
 \newcommand{\docbold}[1]{
+    \textcolor{blue}{\textbf{#1}}
+}
+
+\newcommand{\docitalic}[1]{
     \textcolor{blue}{\textit{\textbf{#1}}}
 }
 
 \newcommand{\doclink}[2]{
     \href{#1}{\docicon{#2}}
+}
+
+\newcommand{\docicon}[1] {
+	\textcolor{blue}{\makebox(2, 7.5){\csname #1\endcsname}}
 }
 
 \newcommand{\docplus}{
@@ -16,13 +25,9 @@
     \hspace{-5pt}
 }
 
-\newcommand{\docicon}[1] {
-	\textcolor{blue}{\makebox(2, 5){\csname #1\endcsname}}
-}
-
 \newcommand{\docitemize}[1]{
     \vspace{-4pt}
-    \begin{itemize}
+    \begin{itemize}[label=\textcolor{blue}{\textbullet}]
         \setlength{\parskip}{0pt}
         #1
     \end{itemize}
@@ -38,19 +43,25 @@
     \vspace{-2pt}
 }
 
-\newcommand{\doclocation}{
-    \docicon{faPhone} \usernumbwork
+\newcommand{\docpersoninfo}{
+    \doclink{https://github.com/jesugq}{faGithub}
+    \hspace{-4pt}
+    \username
 
-    \docicon{faMapMarker} \userpost  
+    \doclink{https://goo.gl/maps/huNs7LUryooCMQML8}{faMapMarker}
+    \userstate ,\\ \usercity
 }
 
-\newcommand{\doccontacts}{
+\newcommand{\doccontactinfo}{
     \footnotesize
     \doclink{https://t.me/t522222650774}{faPaperPlane}
     \normalsize
     \doclink{https://wa.me/+522222650774}{faWhatsapp}
     \doclink{https://m.me/t522222650774}{faFacebookSquare}
     \userchat
+
+    \doclink{tel:522222650774}{faPhone}
+    \userworkphone
 
     \doclink{mailto:jesugq@gmail.com}{faEnvelope}
     \usermail

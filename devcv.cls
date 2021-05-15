@@ -99,11 +99,11 @@
 		#1
 	}
 	\parbox[t]{0.20\textwidth}{
-		\vspace{-\baselineskip}
+		% \vspace{-\baselineskip}
 		#2
 	}
 	\parbox[t]{0.20\textwidth}{
-		\vspace{-\baselineskip}	
+		% \vspace{-\baselineskip}	
 		#3
 	}\\\vspace{-4pt}
 }
