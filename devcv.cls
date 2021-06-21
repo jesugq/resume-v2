@@ -12,7 +12,6 @@
 %   Packages
 %------------------
 
-
 \usepackage{enumitem}
 \usepackage[hidelinks]{hyperref}
 \usepackage[strict]{changepage}
@@ -23,6 +22,7 @@
 \usepackage{calc}
 \pagestyle{empty}
 \setlength{\parindent}{0pt}
+\definecolor{cerulean}{RGB}{4,146,194}
 
 %------------------
 %   Layout
@@ -110,14 +110,14 @@
 
 \newcommand{\entryproject}[4]{
 	\parbox[t]{1.01\textwidth}{
-		{\textbf #2}{\small #3}\hfill\textcolor{blue}{\small \textbf#1}
+		{\textbf #2}{\small #3}\hfill\textcolor{cerulean}{\small \textbf#1}
 		#4
 	}\\
 }
 
 \newcommand{\entryexperience}[4]{
 	\parbox[t]{1.01\textwidth}{
-		{\textbf #2}{\small #3}\hfill\textcolor{blue}{\small \textbf#1}
+		{\textbf #2}{\small #3}\hfill\textcolor{cerulean}{\small \textbf#1}
 		#4
 	}\\
 }
