@@ -32,8 +32,8 @@
 \usepackage{geometry}
 \geometry{
 	paper=a4paper,
-	top=1.5cm,
-	bottom=1.5cm,
+	top=1.25cm,
+	bottom=1.25cm,
 	left=1.5cm,
 	right=1.5cm,
 	headheight=0cm,
@@ -95,15 +95,15 @@
 }
 
 \newcommand{\entryperson}[3]{
-	\parbox[t]{0.55\textwidth}{
+	\parbox[t]{0.50\textwidth}{
 		\vspace{-\baselineskip}
 		#1
 	}
-	\parbox[t]{0.20\textwidth}{
+	\parbox[t]{0.225\textwidth}{
 		% \vspace{-\baselineskip}
 		#2
 	}
-	\parbox[t]{0.20\textwidth}{
+	\parbox[t]{0.225\textwidth}{
 		% \vspace{-\baselineskip}	
 		#3
 	}\\\vspace{-4pt}
