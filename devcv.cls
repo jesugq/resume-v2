@@ -22,6 +22,7 @@
 \usepackage{calc}
 \pagestyle{empty}
 \setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
 \definecolor{cerulean}{RGB}{4,146,194}
 
 %------------------
@@ -90,7 +91,7 @@
 	}
 	\parbox[t]{0.85\textwidth}{
 		#2
-	}\\\\
+	}\\
 }
 
 \newcommand{\entryperson}[3]{
